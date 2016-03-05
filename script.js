@@ -10,6 +10,9 @@ document.onreadystatechange = function () {
             }
             targetField.select();
             targetField.focus();
+            targetField.oninput = function() {
+                dirty = true;
+            }
         });
 
         var inputs = document.querySelectorAll('input');
